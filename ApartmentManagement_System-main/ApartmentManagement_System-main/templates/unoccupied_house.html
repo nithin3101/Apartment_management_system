@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #283856;
+        }
+    
+        .container {
+            width: 95%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffffba;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10vh;
+        }
+    
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+    
+        .house-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+    
+        .house-item {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+    
+        .message {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unoccupied Houses</h1>
+        
+        {% if unoccupied_houses %}
+            <ul class="house-list">
+                {% for block_name, house_number in unoccupied_houses %}
+                    <li class="house-item">
+                        <strong>Block :</strong> {{ block_name }} 
+                        | <strong>House No :</strong> {{ house_number }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="message">No unoccupied houses found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

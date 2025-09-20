@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Block</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
+        .container { width: 400px; margin: auto; background: white; padding: 20px; border-radius: 5px; }
+        input, button { width: 100%; padding: 10px; margin: 5px 0; }
+        button { background-color: red; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: darkred; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Block</h2>
+        <form method="POST">
+            <label>Block Name:</label>
+            <input type="text" name="block_name" required>
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apartment Management System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Abril+Fatface">
+
+  <style>
+    body {
+      font-family: "Poppins";
+      background-color: #283856;
+      padding: 20px;
+      animation: fadeIn 2s;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: #ffffffba
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffffffba;
+      font-family: 'Poppins';
+      font-style: bold;
+    }
+
+    .about-container {
+      display: flex;
+      width: 92%;
+      background-color: #ffffffba;
+      padding: 30px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-content {
+      display: flex;
+      align-items: flex-start;
+      width:93%;
+      margin-left:10px;
+    }
+
+    .about-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #eeb170 50%;
+      color: #eeb170 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 15px;
+      font-size: 40px;
+      font-family: "Poppins";
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-image {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #ffffffba;
+      font-size:27px;
+    }
+
+    h3 {
+      margin: 100px 2;
+      color:#ffffffba;
+      font-family:"Poppins";
+      font-size:18px;
+      justify-content:right;
+    }
+
+    h4{
+      margin: 0 0 10px;
+      font-size: 24px;
+      color:#000;
+      font-size: 27px;
+      text-align: center;
+    }
+  
+  
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-family: "Poppins";
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    .link-item {
+      margin: 10px;
+      font-family: "Poppins";
+      background-color: #ffffffba;
+      border-radius: 10px;
+    }
+
+    .link-item a {
+      display: block;
+      width: 250px;
+      padding: 20px;
+      background-color: #ffffffba 50%;
+      text-align: center;
+      text-decoration: none;
+      color: #283856;
+      box-shadow: 0 0 20px rgba(248, 246, 246, 0.1);
+      transition: background-color 0.5s ease;
+    }
+
+    .link-item a:hover {
+      background-color: #42c7d6ba;
+      border-radius: 10px;
+    }
+
+    .form-group p {
+      font-size: medium;
+      text-align: center;
+      margin-top: 20px;
+      font-family: "Poppins";
+      font-style: oblique;
+    }
+
+    a{color:#283856;
+      background-color:#ffffffba;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Mithilam Flat Owners Welfare Association(MFOWA)</h1>
+  <h2>Sri Ram Nagar Main Road, Nolambur,Chennai-600095</h2>
+  <p></p>
+  <div class="link-list">
+    <div class="link-item">
+      <a href="{{ url_for('residents') }}">Residential Information Viewer</a>
+    </div>
+    <div class="link-item">
+      <a href="{{ url_for('flats') }}">Flat Information Management Portal</a>
+    </div>
+    <div class="link-item">
+      <a href="{{url_for('payments')}}">Maintenance Status Tracker</a>
+    </div>
+  </div>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <div class="about-container">
+    <div class="about-content">
+      <div class="about-icon">
+        <i class="fa fa-info"></i>
+      </div>
+
+      
+     <div class="about-container">
+        <div class="about-content">
+          <div class="about-icon">
+            <i class="fa fa-info"></i>
+          </div>
+          <div class="about-text">
+            <h4>ABOUT US</h4>
+            <p>
+              DABC Mithilam is a sprawling luxury enclave of magnificent Apartments in Chennai, elevating the contemporary lifestyle. 
+              These Residential Apartments in Chennai offer you the kind of life that rejuvenates you, the one that inspires you to 
+              live life to the fullest. DABC Mithilam by De Luxe Apartments & Buildings Co DABC in Mogappair West is meticulously 
+              designed with unbound convenience & the best of amenities and is an effortless blend of modernity and elegance. The 
+              builders of DABC Mithilam understand the aesthetics of a perfectly harmonious space called ‘Home’, that is why the 
+              floor plan of DABC Mithilam offers a unique blend of spacious as well as well-ventilated rooms.
+            </p>
+          </div>
+         
+          <div class="about-image">
+            <img src="{{ url_for('static', filename='pic.jpg') }}" alt="Apartment Image">
+          </div>
+        </div>
+      </div>
+  
+      </div>
+    </div>
+  </div>
+  <h3>Contact Us:  1234567890</h3>
+  <h3>Location:</h3>
+  <h3><a href="https://goo.gl/maps/knzDUKkB4tCs3okD9">Click Here</a></h3>
+</body>
+</html>
+
